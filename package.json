@@ -3,7 +3,8 @@
   "description": "mongo_firebase_app",
   "version": "0.0.1",
   "scripts": {
-    "init": "npm install"
+    "init": "npm install",
+    "postinstall": "bower install"
   },
   "private": true,
   "devDependencies": {},

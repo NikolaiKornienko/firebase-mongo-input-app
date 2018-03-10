@@ -7,27 +7,22 @@ var app = express();
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
-// Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
-// Connect to the database before starting the application server.
 mongodb.MongoClient.connect("mongodb://localhost/mongoFirebaseTest", function(err, database) {
     if (err) {
         return console.log("Connection to DB failed");
     }
 
-    // Save database object from the callback for reuse.
     db = database;
     console.log("Database connection ready");
 
-    // Initialize the app.
     var server = app.listen(5000, function() {
         var port = server.address().port;
         console.log("App now running on port", port);
     });
 });
 
-// Generic error handler used by all endpoints.
 function handleError(res, reason, message, code) {
     console.log("ERROR: " + reason);
     res.status(code || 500).json({
