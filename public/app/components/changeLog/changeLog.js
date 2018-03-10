@@ -1,7 +1,6 @@
 class changeLogController{
     constructor(mongoService){
         this.mongoService = mongoService;
-        this.getLogs();
     }
 
     getLogs(){
