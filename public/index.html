@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body ng-app="mongoFirebaseApp">
+        <div ng-controller="MainController as $ctrl">
+            <div class="col-md-12 row">
+                <div class="col-md-6">
+                    <number-input update-log="$ctrl.logUpdate"></number-input>
+                </div>
+                <div class="col-md-6">
+                    <change-log log-update="$ctrl.logUpdate"></change-log>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCRIPTS -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+
+        <!--App -->
+        <script src="app/app.js"></script>
+        <script src="app/services/firebaseService.js"></script>
+        <script src="app/services/mongoService.js"></script>
+        <script src="app/components/numberInput/numberInput.js"></script>
+        <script src="app/components/changeLog/changeLog.js"></script>
+        <script src="app/controllers/main.js"></script>
+
+    </body>
+</html>

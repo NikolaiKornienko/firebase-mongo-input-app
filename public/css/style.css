@@ -1,0 +1,12 @@
+.loading {
+    background-color: #ffffff;
+    background-image: url("http://loadinggif.com/images/image-selection/3.gif");
+    background-size: 25px 25px;
+    background-position:right center;
+    background-repeat: no-repeat;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
