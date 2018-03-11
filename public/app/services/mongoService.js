@@ -7,9 +7,8 @@ class mongoService {
         return this.$http.get("/logs");
     }
 
-    writeNumber(number) {
-        let newNumber = {"data": number};
-        return this.$http.post('/datas', newNumber);
+    updateData(data) {
+        return this.$http.post("/datas", {data: data});
     }
 }
 

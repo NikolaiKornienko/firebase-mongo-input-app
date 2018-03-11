@@ -4,7 +4,7 @@
     </div>
     <div class="row">
         <div ng-repeat="log in $ctrl.logs">
-            <span ng-bind="'The data was ' + (log.currentValue ? 'changed to ' + log.currentValue : 'cleared') + ' at ' + (log.date | date : 'medium')"></span>
+            <span ng-bind="'The data was ' + (log.current_value ? 'changed to \'' + log.current_value + '\'' : 'cleared') + ' at ' + (log.updated_at | date : 'medium')"></span>
         </div>
     </div>
 </div>
